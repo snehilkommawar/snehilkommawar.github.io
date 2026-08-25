@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,533 +17,452 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f9ff;
+            color: #172033;
             line-height: 1.6;
-            color: #1f2937;
-            background: #f8fafc;
         }
 
-        /* =========================
-           NAVBAR
-        ========================= */
+        /* NAVBAR */
 
         header {
-            background: rgba(255, 255, 255, 0.97);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: white;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
-        header h2 {
-            color: #2563eb;
-            font-size: 24px;
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2864e8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
         }
 
         nav a {
             text-decoration: none;
-            color: #374151;
-            margin-left: 25px;
-            font-weight: 600;
+            color: #273449;
+            font-weight: bold;
+            font-size: 17px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #2563eb;
+            color: #2864e8;
         }
 
-
-        /* =========================
-           GENERAL
-        ========================= */
+        /* GENERAL SECTION */
 
         section {
-            padding: 90px 8%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 30px;
         }
 
-        .section-title {
+        section h2 {
             text-align: center;
             font-size: 36px;
-            margin-bottom: 50px;
-            color: #111827;
+            margin-bottom: 45px;
+            color: #2864e8;
         }
 
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #2563eb;
-            margin: 12px auto 0;
-            border-radius: 5px;
-        }
+        /* HOME */
 
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
+        #home {
             min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            max-width: none;
+            padding: 150px 30px 100px;
             text-align: center;
             background: linear-gradient(
                 135deg,
-                #eff6ff,
-                #f8fafc
+                #edf5ff,
+                #f8fbff
             );
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .hero-content {
-            max-width: 900px;
-            animation: fadeUp 1s ease;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
+        #home h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
             color: #111827;
         }
 
-        .hero h1 span {
-            color: #2563eb;
+        #home h1 span {
+            color: #2864e8;
         }
 
-        .hero h3 {
-            font-size: 25px;
-            color: #475569;
+        .home-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #42526b;
             margin-bottom: 25px;
         }
 
-        .hero p {
+        .home-description {
+            max-width: 800px;
             font-size: 19px;
-            color: #64748b;
-            margin-bottom: 30px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
+            color: #52657d;
+            margin-bottom: 35px;
         }
 
-
-        /* =========================
-           BUTTONS
-        ========================= */
+        .buttons {
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
         .btn {
             display: inline-block;
-            padding: 13px 28px;
-            margin: 6px;
+            padding: 14px 30px;
             border-radius: 8px;
             text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
-            border: 2px solid #2563eb;
-            color: #2563eb;
-            background: white;
             transition: 0.3s;
         }
 
         .btn-primary {
-            background: #2563eb;
+            background: #2864e8;
             color: white;
         }
 
-        .btn:hover {
-            background: #2563eb;
+        .btn-primary:hover {
+            background: #174fc4;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 2px solid #2864e8;
+            color: #2864e8;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: #2864e8;
             color: white;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
         }
 
+        /* ABOUT */
 
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: white;
-        }
-
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            font-size: 18px;
-            color: #475569;
-        }
-
-        .about-highlight {
-            color: #2563eb;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           EDUCATION
-        ========================= */
-
-        .education {
-            background: #f8fafc;
-        }
-
-        .education-card {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
+        .about-box {
             background: white;
             padding: 35px;
-            border-radius: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            font-size: 18px;
+            color: #4b5c73;
+        }
+
+        /* EDUCATION */
+
+        .education-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .education-card h3 {
+            color: #2864e8;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .education-card p {
+            font-size: 18px;
+            color: #52657d;
+            margin: 7px 0;
+        }
+
+        /* SKILLS */
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: 0.3s;
         }
 
-        .education-card:hover {
+        .skill-card:hover {
             transform: translateY(-5px);
         }
 
-        .education-icon {
-            font-size: 45px;
+        .skill-card h3 {
+            color: #2864e8;
             margin-bottom: 10px;
         }
 
-        .education-card h3 {
-            color: #2563eb;
-            margin-bottom: 10px;
-            font-size: 24px;
+        .skill-card p {
+            color: #52657d;
         }
 
-        .education-card p {
-            margin: 8px 0;
-            color: #475569;
-        }
+        /* PROJECTS */
 
-        .cgpa {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 8px 15px;
-            border-radius: 20px;
-            background: #dbeafe;
-            color: #1d4ed8;
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           SKILLS
-        ========================= */
-
-        #skills {
-            background: white;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-            max-width: 950px;
-            margin: auto;
-        }
-
-        .skill {
-            background: #f8fafc;
-            padding: 14px 24px;
-            border-radius: 25px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-            font-weight: bold;
-            color: #374151;
-            border: 1px solid #e5e7eb;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            color: white;
-            background: #2563eb;
-            transform: translateY(-4px);
-        }
-
-
-        /* =========================
-           PROJECTS
-        ========================= */
-
-        .projects {
-            background: #eff6ff;
-        }
-
-        .project-container {
+        .projects-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 1050px;
-            margin: auto;
+            gap: 25px;
         }
 
         .project-card {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: 0.3s;
-            border-top: 5px solid #2563eb;
         }
 
         .project-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .project-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .project-card h3 {
-            color: #2563eb;
-            margin-bottom: 12px;
-            font-size: 25px;
+            color: #2864e8;
+            font-size: 22px;
+            margin-bottom: 15px;
         }
 
         .project-card p {
-            color: #64748b;
-            margin-bottom: 18px;
+            color: #52657d;
+            margin-bottom: 15px;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            color: #52657d;
+        }
+
+        .project-card li {
+            margin-bottom: 8px;
+        }
+
+        .tech-stack {
+            margin-top: 20px;
+            color: #273449 !important;
         }
 
         .status {
             display: inline-block;
-            padding: 7px 14px;
+            background: #edf5ff;
+            padding: 8px 15px;
             border-radius: 20px;
-            background: #fef3c7;
-            color: #92400e;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 18px;
-        }
-
-        .tech-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .tech {
-            background: #dbeafe;
-            color: #1d4ed8;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 13px;
+            color: #2864e8 !important;
             font-weight: bold;
         }
 
+        /* CONTACT */
 
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
+        .contact-box {
             background: white;
-        }
-
-        .contact-card {
-            max-width: 750px;
-            margin: auto;
-            text-align: center;
-            background: #f8fafc;
             padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
         }
 
-        .contact-card p {
-            margin: 18px 0;
-            font-size: 17px;
+        .contact-box p {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #52657d;
         }
 
-        .contact-card a {
-            color: #2563eb;
+        .contact-box a {
+            color: #2864e8;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: bold;
         }
 
-        .contact-card a:hover {
+        .contact-box a:hover {
             text-decoration: underline;
         }
 
-
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
-            background: #111827;
+            background: #172033;
             color: white;
             text-align: center;
-            padding: 28px;
+            padding: 25px;
         }
 
-        footer p {
-            margin: 5px;
-        }
+        /* RESPONSIVE */
 
+        @media (max-width: 800px) {
 
-        /* =========================
-           ANIMATION
-        ========================= */
-
-        @keyframes fadeUp {
-
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            header {
+            .navbar {
                 flex-direction: column;
                 gap: 15px;
-                padding: 18px 5%;
             }
 
-            header h2 {
-                font-size: 22px;
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
-            nav {
-                text-align: center;
+            #home h1 {
+                font-size: 42px;
             }
 
-            nav a {
-                margin: 0 7px;
-                font-size: 14px;
+            .home-title {
+                font-size: 21px;
             }
 
-            section {
-                padding: 65px 5%;
-            }
-
-            .hero {
-                min-height: 85vh;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .hero h3 {
-                font-size: 20px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .section-title {
-                font-size: 30px;
-            }
-
-            .project-container {
+            .skills-container {
                 grid-template-columns: 1fr;
             }
 
-            .project-card {
-                padding: 28px;
+            .projects-container {
+                grid-template-columns: 1fr;
             }
 
+            section {
+                padding: 70px 20px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            #home h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                font-size: 15px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            section h2 {
+                font-size: 30px;
+            }
+
+            .project-card {
+                padding: 22px;
+            }
         }
 
     </style>
-
 </head>
 
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
+    <!-- NAVIGATION -->
 
     <header>
 
-        <h2>Snehil Kommawar</h2>
+        <div class="navbar">
 
-        <nav>
+            <div class="logo">
+                Snehil Kommawar
+            </div>
 
-            <a href="#home">Home</a>
+            <nav>
 
-            <a href="#about">About</a>
+                <ul>
 
-            <a href="#education">Education</a>
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
 
-            <a href="#skills">Skills</a>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
 
-            <a href="#projects">Projects</a>
+                    <li>
+                        <a href="#education">Education</a>
+                    </li>
 
-            <a href="#contact">Contact</a>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
 
-        </nav>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
+    <!-- HOME -->
 
-    <!-- =========================
-         HOME
-    ========================= -->
+    <section id="home">
 
-    <section id="home" class="hero">
+        <h1>
+            Hi, I'm <span>Snehil Kommawar</span>
+        </h1>
 
-        <div class="hero-content">
+        <p class="home-title">
+            Programmer | Web Developer | Aspiring Software Developer
+        </p>
 
-            <h1>
-                Hi, I'm <span>Snehil Kommawar</span>
-            </h1>
+        <p class="home-description">
 
-            <h3>
-                Programmer | Web Developer | Aspiring Software Developer
-            </h3>
+            I am a B.Tech student passionate about programming,
+            web development and building practical software projects.
+            I am continuously learning and improving my technical skills.
 
-            <p>
-                I am a B.Tech student passionate about programming,
-                web development and building practical software projects.
-                I am continuously learning and improving my technical skills.
-            </p>
+        </p>
 
+        <div class="buttons">
 
             <a
+                href="https://github.com/snehilkommawar"
+                target="_blank"
                 class="btn btn-primary"
-                href="https://github.com/snehilkommawar">
-
+            >
                 GitHub
-
             </a>
 
-
             <a
-                class="btn"
-                href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
-
+                href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
+                target="_blank"
+                class="btn btn-outline"
+            >
                 LinkedIn
-
             </a>
 
         </div>
@@ -552,33 +470,41 @@
     </section>
 
 
+    <!-- ABOUT -->
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+    <section id="about">
 
-    <section id="about" class="about">
+        <h2>About Me</h2>
 
-        <h2 class="section-title">
-            About Me
-        </h2>
-
-        <div class="about-content">
+        <div class="about-box">
 
             <p>
-                I am <strong>Snehil Kommawar</strong>, a B.Tech student
-                at the <strong>Institute of Aeronautical Engineering</strong>.
+
+                I am a B.Tech student at the
+                <strong>Institute of Aeronautical Engineering</strong>,
+                currently pursuing my degree and expected to graduate in
+                <strong>2028</strong>.
+
             </p>
 
             <br>
 
             <p>
-                I am interested in
-                <span class="about-highlight">software development</span>,
-                <span class="about-highlight">web development</span>,
-                programming and problem solving.
-                I enjoy learning new technologies and developing
-                practical projects to improve my technical skills.
+
+                I am interested in software development, programming,
+                web development and building practical applications.
+                I enjoy learning new technologies and improving my
+                problem-solving skills through projects.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Currently, I am working on improving my skills in
+                Python, Java, React.js, HTML, SQL and web development.
+
             </p>
 
         </div>
@@ -586,99 +512,118 @@
     </section>
 
 
+    <!-- EDUCATION -->
 
-    <!-- =========================
-         EDUCATION
-    ========================= -->
+    <section id="education">
 
-    <section id="education" class="education">
-
-        <h2 class="section-title">
-            Education
-        </h2>
+        <h2>Education</h2>
 
         <div class="education-card">
 
-            <div class="education-icon">
-                🎓
-            </div>
-
-            <h3>
-                Bachelor of Technology (B.Tech)
-            </h3>
+            <h3>Bachelor of Technology (B.Tech)</h3>
 
             <p>
-                <strong>
-                    Institute of Aeronautical Engineering
-                </strong>
+                <strong>Institute:</strong>
+                Institute of Aeronautical Engineering
             </p>
 
             <p>
-                Expected Graduation:
-                <strong>2028</strong>
+                <strong>Expected Graduation:</strong>
+                2028
             </p>
 
             <p>
-                Current Academic Status:
-                <strong>4th Semester</strong>
+                <strong>Current CGPA:</strong>
+                7.61 / 10
             </p>
 
-            <span class="cgpa">
-                CGPA: 7.61 / 10
-            </span>
+            <p>
+                <strong>Current Semester:</strong>
+                4th Semester
+            </p>
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         SKILLS
-    ========================= -->
+    <!-- SKILLS -->
 
     <section id="skills">
 
-        <h2 class="section-title">
-            Technical Skills
-        </h2>
+        <h2>Technical Skills</h2>
 
         <div class="skills-container">
 
-            <div class="skill">
-                🐍 Python
+            <div class="skill-card">
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python<br>
+                    Java
+                </p>
+
             </div>
 
-            <div class="skill">
-                ☕ Java
+
+            <div class="skill-card">
+
+                <h3>Web Development</h3>
+
+                <p>
+                    HTML<br>
+                    CSS<br>
+                    React.js
+                </p>
+
             </div>
 
-            <div class="skill">
-                🌐 HTML
+
+            <div class="skill-card">
+
+                <h3>Database</h3>
+
+                <p>
+                    SQL<br>
+                    MySQL
+                </p>
+
             </div>
 
-            <div class="skill">
-                ⚛️ React.js
+
+            <div class="skill-card">
+
+                <h3>Version Control</h3>
+
+                <p>
+                    Git<br>
+                    GitHub
+                </p>
+
             </div>
 
-            <div class="skill">
-                🗄️ SQL
+
+            <div class="skill-card">
+
+                <h3>Development Tools</h3>
+
+                <p>
+                    VS Code
+                </p>
+
             </div>
 
-            <div class="skill">
-                🐬 MySQL
-            </div>
 
-            <div class="skill">
-                🔧 Git
-            </div>
+            <div class="skill-card">
 
-            <div class="skill">
-                💻 GitHub
-            </div>
+                <h3>Other</h3>
 
-            <div class="skill">
-                📝 VS Code
+                <p>
+                    Data Structures<br>
+                    Algorithms
+                </p>
+
             </div>
 
         </div>
@@ -686,106 +631,235 @@
     </section>
 
 
+    <!-- PROJECTS -->
 
-    <!-- =========================
-         PROJECTS
-    ========================= -->
+    <section id="projects">
 
-    <section id="projects" class="projects">
+        <h2>Projects</h2>
 
-        <h2 class="section-title">
-            Projects
-        </h2>
+        <div class="projects-container">
 
 
-        <div class="project-container">
+            <!-- PASSWORD GENERATOR -->
+
+            <div class="project-card">
+
+                <h3>
+                    Password Generator | Python
+                </h3>
+
+                <p>
+                    Created a command-line interface for a secure
+                    password generator based on Python.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Added user-customizable password length options
+                        and support for capital, lowercase, digits,
+                        and symbols.
+                    </li>
+
+                    <li>
+                        Generated strong and unpredictable passwords
+                        using the built-in random and string libraries
+                        in Python.
+                    </li>
+
+                    <li>
+                        Demonstrated input validation, string handling,
+                        and a clear code structure in a user-friendly
+                        utility tool.
+                    </li>
+
+                </ul>
+
+                <p class="tech-stack">
+
+                    <strong>Technologies:</strong>
+                    Python
+
+                </p>
+
+            </div>
+
+
+            <!-- FLIGHT ACCIDENT ML -->
+
+            <div class="project-card">
+
+                <h3>
+                    Applying Machine Learning to Predict the Severity
+                    Levels and Find Root Causes in Flight Accidents
+                </h3>
+
+                <p>
+
+                    Developed a machine learning-based system to predict
+                    the severity of flight accidents and identify their
+                    root causes with high accuracy. Built an interactive
+                    dashboard to visualize predictive insights for
+                    aviation safety analysis.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Implemented supervised learning models
+                        (XGBoost, Random Forest) with data preprocessing
+                        and feature engineering to achieve up to 85%
+                        prediction accuracy.
+                    </li>
+
+                    <li>
+                        Integrated responsive dashboards using HTML,
+                        CSS, and Bootstrap to present severity predictions
+                        and root cause analysis interactively.
+                    </li>
+
+                    <li>
+                        Connected the machine learning model with the
+                        dashboard backend, enabling real-time visualization
+                        of results and user-friendly interpretation.
+                    </li>
+
+                </ul>
+
+                <p class="tech-stack">
+
+                    <strong>Technologies:</strong>
+                    Python | Machine Learning | HTML | CSS | Bootstrap
+
+                </p>
+
+            </div>
+
+
+            <!-- MOVIE REVIEWER -->
+
+            <div class="project-card">
+
+                <h3>
+                    Movie Reviewer App | React.js | Firebase
+                </h3>
+
+                <p>
+
+                    Built a dynamic Movie Reviewer App with React.js
+                    and Firebase, enabling users to browse movies,
+                    search for reviews, and add their own feedback
+                    in real time.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Implemented authentication system
+                        (sign-up/sign-in) using Firebase Auth to manage
+                        secure user sessions.
+                    </li>
+
+                    <li>
+                        Connected Firebase Firestore for storing,
+                        retrieving, and updating movie reviews in
+                        real time, ensuring instant synchronization
+                        across users.
+                    </li>
+
+                    <li>
+                        Integrated search functionality using query
+                        parameters to allow users to quickly find
+                        specific movie reviews.
+                    </li>
+
+                    <li>
+                        Utilized HTTP methods such as GET, POST, PUT,
+                        PATCH, and DELETE to handle dynamic data
+                        interaction.
+                    </li>
+
+                    <li>
+                        Developed a responsive UI using Bootstrap and
+                        custom CSS, with smooth navigation and dynamic
+                        review rendering powered by React Router.
+                    </li>
+
+                </ul>
+
+                <p class="tech-stack">
+
+                    <strong>Technologies:</strong>
+                    React.js | Firebase | HTML | CSS | Bootstrap
+
+                </p>
+
+            </div>
 
 
             <!-- DJANGO CRM -->
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    💼
-                </div>
-
                 <h3>
-                    Django CRM
+                    Django CRM System
                 </h3>
 
-                <span class="status">
-                    🚧 In Progress
-                </span>
-
                 <p>
-                    A Customer Relationship Management web application
-                    currently being developed using Django. The project
-                    focuses on learning web application development and
-                    implementing customer management functionality.
+
+                    A customer relationship management web application
+                    currently under development using Django. The project
+                    focuses on managing customer information and
+                    CRM-related operations.
+
                 </p>
 
-                <div class="tech-list">
+                <p class="status">
 
-                    <span class="tech">
-                        Python
-                    </span>
+                    🔄 In Progress
 
-                    <span class="tech">
-                        Django
-                    </span>
+                </p>
 
-                    <span class="tech">
-                        HTML
-                    </span>
+                <p class="tech-stack">
 
-                    <span class="tech">
-                        MySQL
-                    </span>
+                    <strong>Technologies:</strong>
+                    Python | Django | HTML | CSS | MySQL
 
-                </div>
+                </p>
 
             </div>
-
 
 
             <!-- DENGUE DETECTION -->
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    🦟
-                </div>
-
                 <h3>
-                    Dengue Detection
+                    Dengue Detection System
                 </h3>
 
-                <span class="status">
-                    📌 Planned
-                </span>
-
                 <p>
-                    A planned project exploring a smartphone-camera-based
-                    approach for preliminary dengue screening. The project
-                    aims to explore a simple and non-invasive screening
-                    approach.
+
+                    A planned smartphone-based, non-invasive preliminary
+                    dengue screening project. The project aims to explore
+                    image-based analysis using a smartphone camera.
+
                 </p>
 
-                <div class="tech-list">
+                <p class="status">
 
-                    <span class="tech">
-                        Python
-                    </span>
+                    📌 Planned / Not Started
 
-                    <span class="tech">
-                        Machine Learning
-                    </span>
+                </p>
 
-                    <span class="tech">
-                        Computer Vision
-                    </span>
+                <p class="tech-stack">
 
-                </div>
+                    <strong>Technologies:</strong>
+                    To be determined during development
+
+                </p>
 
             </div>
 
@@ -795,29 +869,20 @@
     </section>
 
 
+    <!-- CONTACT -->
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
+    <section id="contact">
 
-    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
 
-        <h2 class="section-title">
-            Contact Me
-        </h2>
-
-        <div class="contact-card">
+        <div class="contact-box">
 
             <p>
 
-                <strong>
-                    📧 Email:
-                </strong>
+                <strong>Email:</strong>
 
                 <a href="mailto:snehilkommawar@gmail.com">
-
                     snehilkommawar@gmail.com
-
                 </a>
 
             </p>
@@ -825,14 +890,13 @@
 
             <p>
 
-                <strong>
-                    💻 GitHub:
-                </strong>
+                <strong>GitHub:</strong>
 
-                <a href="https://github.com/snehilkommawar">
-
+                <a
+                    href="https://github.com/snehilkommawar"
+                    target="_blank"
+                >
                     github.com/snehilkommawar
-
                 </a>
 
             </p>
@@ -840,36 +904,58 @@
 
             <p>
 
-                <strong>
-                    🔗 LinkedIn:
-                </strong>
+                <strong>LinkedIn:</strong>
 
-                <a href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
-
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
+                    target="_blank"
+                >
                     linkedin.com/in/snehil-kommawar-75865433a
-
                 </a>
 
             </p>
+
+
+            <br>
+
+            <div class="buttons">
+
+                <a
+                    href="mailto:snehilkommawar@gmail.com"
+                    class="btn btn-primary"
+                >
+                    Email Me
+                </a>
+
+                <a
+                    href="https://github.com/snehilkommawar"
+                    target="_blank"
+                    class="btn btn-outline"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
+                    target="_blank"
+                    class="btn btn-outline"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
 
         </div>
 
     </section>
 
 
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
 
     <footer>
 
         <p>
             © 2026 Snehil Kommawar. All Rights Reserved.
-        </p>
-
-        <p>
-            Built with HTML and CSS
         </p>
 
     </footer>
