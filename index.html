@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,22 +24,25 @@
             background: #f8fafc;
         }
 
-        /* NAVBAR */
+        /* =========================
+           NAVBAR
+        ========================= */
 
         header {
-            background: white;
-            padding: 20px 8%;
+            background: rgba(255, 255, 255, 0.97);
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         }
 
         header h2 {
             color: #2563eb;
+            font-size: 24px;
         }
 
         nav a {
@@ -46,26 +50,43 @@
             color: #374151;
             margin-left: 25px;
             font-weight: 600;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #2563eb;
         }
 
-        /* GENERAL */
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         section {
-            padding: 80px 8%;
+            padding: 90px 8%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 35px;
-            margin-bottom: 45px;
+            font-size: 36px;
+            margin-bottom: 50px;
             color: #111827;
         }
 
-        /* HERO */
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            margin: 12px auto 0;
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 90vh;
@@ -73,15 +94,20 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: #eff6ff;
+            background: linear-gradient(
+                135deg,
+                #eff6ff,
+                #f8fafc
+            );
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
+            animation: fadeUp 1s ease;
         }
 
         .hero h1 {
-            font-size: 50px;
+            font-size: 55px;
             margin-bottom: 15px;
             color: #111827;
         }
@@ -97,23 +123,30 @@
         }
 
         .hero p {
-            font-size: 18px;
+            font-size: 19px;
             color: #64748b;
             margin-bottom: 30px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* BUTTONS */
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .btn {
             display: inline-block;
-            padding: 12px 25px;
-            margin: 5px;
+            padding: 13px 28px;
+            margin: 6px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             border: 2px solid #2563eb;
             color: #2563eb;
             background: white;
+            transition: 0.3s;
         }
 
         .btn-primary {
@@ -124,9 +157,14 @@
         .btn:hover {
             background: #2563eb;
             color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
         }
 
-        /* ABOUT */
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             background: white;
@@ -140,52 +178,100 @@
             color: #475569;
         }
 
-        /* EDUCATION */
+        .about-highlight {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
 
         .education {
             background: #f8fafc;
         }
 
         .education-card {
-            max-width: 800px;
+            max-width: 850px;
             margin: auto;
             text-align: center;
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
         }
 
         .education-card h3 {
             color: #2563eb;
             margin-bottom: 10px;
+            font-size: 24px;
         }
 
         .education-card p {
             margin: 8px 0;
+            color: #475569;
         }
 
-        /* SKILLS */
+        .cgpa {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        #skills {
+            background: white;
+        }
 
         .skills-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            max-width: 900px;
+            gap: 18px;
+            max-width: 950px;
             margin: auto;
         }
 
         .skill {
-            background: white;
-            padding: 12px 22px;
+            background: #f8fafc;
+            padding: 14px 24px;
             border-radius: 25px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
             font-weight: bold;
             color: #374151;
+            border: 1px solid #e5e7eb;
+            transition: 0.3s;
         }
 
-        /* PROJECTS */
+        .skill:hover {
+            color: white;
+            background: #2563eb;
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
 
         .projects {
             background: #eff6ff;
@@ -194,56 +280,89 @@
         .project-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            max-width: 1000px;
+            gap: 30px;
+            max-width: 1050px;
             margin: auto;
         }
 
         .project-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            border-top: 5px solid #2563eb;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
         }
 
         .project-card h3 {
             color: #2563eb;
-            margin-bottom: 15px;
-            font-size: 24px;
+            margin-bottom: 12px;
+            font-size: 25px;
         }
 
         .project-card p {
             color: #64748b;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .status {
             display: inline-block;
-            padding: 6px 12px;
-            border-radius: 15px;
+            padding: 7px 14px;
+            border-radius: 20px;
             background: #fef3c7;
             color: #92400e;
             font-size: 14px;
             font-weight: bold;
+            margin-bottom: 18px;
         }
 
-        /* CONTACT */
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech {
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
 
         .contact {
             background: white;
         }
 
         .contact-card {
-            max-width: 700px;
+            max-width: 750px;
             margin: auto;
             text-align: center;
             background: #f8fafc;
-            padding: 30px;
-            border-radius: 12px;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
         }
 
         .contact-card p {
-            margin: 15px 0;
+            margin: 18px 0;
             font-size: 17px;
         }
 
@@ -257,27 +376,73 @@
             text-decoration: underline;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #111827;
             color: white;
             text-align: center;
-            padding: 25px;
+            padding: 28px;
         }
 
-        /* MOBILE */
+        footer p {
+            margin: 5px;
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 768px) {
 
             header {
                 flex-direction: column;
                 gap: 15px;
+                padding: 18px 5%;
+            }
+
+            header h2 {
+                font-size: 22px;
+            }
+
+            nav {
+                text-align: center;
             }
 
             nav a {
                 margin: 0 7px;
                 font-size: 14px;
+            }
+
+            section {
+                padding: 65px 5%;
+            }
+
+            .hero {
+                min-height: 85vh;
             }
 
             .hero h1 {
@@ -288,23 +453,35 @@
                 font-size: 20px;
             }
 
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
             .project-container {
                 grid-template-columns: 1fr;
             }
 
-            section {
-                padding: 60px 5%;
+            .project-card {
+                padding: 28px;
             }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
 
     <header>
 
@@ -329,7 +506,10 @@
     </header>
 
 
-    <!-- HOME -->
+
+    <!-- =========================
+         HOME
+    ========================= -->
 
     <section id="home" class="hero">
 
@@ -350,8 +530,6 @@
             </p>
 
 
-            <!-- GITHUB -->
-
             <a
                 class="btn btn-primary"
                 href="https://github.com/snehilkommawar">
@@ -360,8 +538,6 @@
 
             </a>
 
-
-            <!-- LINKEDIN -->
 
             <a
                 class="btn"
@@ -376,7 +552,10 @@
     </section>
 
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section id="about" class="about">
 
@@ -394,10 +573,12 @@
             <br>
 
             <p>
-                I am interested in software development, web development,
-                programming and problem solving. I enjoy learning new
-                technologies and developing practical projects to improve
-                my technical skills.
+                I am interested in
+                <span class="about-highlight">software development</span>,
+                <span class="about-highlight">web development</span>,
+                programming and problem solving.
+                I enjoy learning new technologies and developing
+                practical projects to improve my technical skills.
             </p>
 
         </div>
@@ -405,7 +586,10 @@
     </section>
 
 
-    <!-- EDUCATION -->
+
+    <!-- =========================
+         EDUCATION
+    ========================= -->
 
     <section id="education" class="education">
 
@@ -414,6 +598,10 @@
         </h2>
 
         <div class="education-card">
+
+            <div class="education-icon">
+                🎓
+            </div>
 
             <h3>
                 Bachelor of Technology (B.Tech)
@@ -426,23 +614,28 @@
             </p>
 
             <p>
-                Expected Graduation: <strong>2028</strong>
+                Expected Graduation:
+                <strong>2028</strong>
             </p>
 
             <p>
-                Current CGPA: <strong>7.61 / 10</strong>
+                Current Academic Status:
+                <strong>4th Semester</strong>
             </p>
 
-            <p>
-                CGPA as of 4th Semester
-            </p>
+            <span class="cgpa">
+                CGPA: 7.61 / 10
+            </span>
 
         </div>
 
     </section>
 
 
-    <!-- SKILLS -->
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
 
     <section id="skills">
 
@@ -453,39 +646,39 @@
         <div class="skills-container">
 
             <div class="skill">
-                Python
+                🐍 Python
             </div>
 
             <div class="skill">
-                Java
+                ☕ Java
             </div>
 
             <div class="skill">
-                HTML
+                🌐 HTML
             </div>
 
             <div class="skill">
-                React.js
+                ⚛️ React.js
             </div>
 
             <div class="skill">
-                SQL
+                🗄️ SQL
             </div>
 
             <div class="skill">
-                MySQL
+                🐬 MySQL
             </div>
 
             <div class="skill">
-                Git
+                🔧 Git
             </div>
 
             <div class="skill">
-                GitHub
+                💻 GitHub
             </div>
 
             <div class="skill">
-                VS Code
+                📝 VS Code
             </div>
 
         </div>
@@ -493,7 +686,10 @@
     </section>
 
 
-    <!-- PROJECTS -->
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
 
     <section id="projects" class="projects">
 
@@ -509,9 +705,17 @@
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    💼
+                </div>
+
                 <h3>
                     Django CRM
                 </h3>
+
+                <span class="status">
+                    🚧 In Progress
+                </span>
 
                 <p>
                     A Customer Relationship Management web application
@@ -520,20 +724,45 @@
                     implementing customer management functionality.
                 </p>
 
-                <span class="status">
-                    🚧 In Progress
-                </span>
+                <div class="tech-list">
+
+                    <span class="tech">
+                        Python
+                    </span>
+
+                    <span class="tech">
+                        Django
+                    </span>
+
+                    <span class="tech">
+                        HTML
+                    </span>
+
+                    <span class="tech">
+                        MySQL
+                    </span>
+
+                </div>
 
             </div>
+
 
 
             <!-- DENGUE DETECTION -->
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    🦟
+                </div>
+
                 <h3>
                     Dengue Detection
                 </h3>
+
+                <span class="status">
+                    📌 Planned
+                </span>
 
                 <p>
                     A planned project exploring a smartphone-camera-based
@@ -542,9 +771,21 @@
                     approach.
                 </p>
 
-                <span class="status">
-                    📌 Planned
-                </span>
+                <div class="tech-list">
+
+                    <span class="tech">
+                        Python
+                    </span>
+
+                    <span class="tech">
+                        Machine Learning
+                    </span>
+
+                    <span class="tech">
+                        Computer Vision
+                    </span>
+
+                </div>
 
             </div>
 
@@ -554,7 +795,10 @@
     </section>
 
 
-    <!-- CONTACT -->
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact" class="contact">
 
@@ -564,11 +808,10 @@
 
         <div class="contact-card">
 
-
             <p>
 
                 <strong>
-                    Email:
+                    📧 Email:
                 </strong>
 
                 <a href="mailto:snehilkommawar@gmail.com">
@@ -583,11 +826,10 @@
             <p>
 
                 <strong>
-                    GitHub:
+                    💻 GitHub:
                 </strong>
 
-                <a
-                    href="https://github.com/snehilkommawar">
+                <a href="https://github.com/snehilkommawar">
 
                     github.com/snehilkommawar
 
@@ -599,11 +841,10 @@
             <p>
 
                 <strong>
-                    LinkedIn:
+                    🔗 LinkedIn:
                 </strong>
 
-                <a
-                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
+                <a href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
 
                     linkedin.com/in/snehil-kommawar-75865433a
 
@@ -611,13 +852,15 @@
 
             </p>
 
-
         </div>
 
     </section>
 
 
-    <!-- FOOTER -->
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
 
     <footer>
 
