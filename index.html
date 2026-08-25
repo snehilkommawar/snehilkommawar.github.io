@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Snehil Kommawar | Portfolio</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -21,8 +23,10 @@
             background: #f8fafc;
         }
 
+        /* NAVBAR */
+
         header {
-            background: #ffffff;
+            background: white;
             padding: 20px 8%;
             display: flex;
             justify-content: space-between;
@@ -30,7 +34,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
         }
 
         header h2 {
@@ -48,9 +52,20 @@
             color: #2563eb;
         }
 
+        /* GENERAL */
+
         section {
             padding: 80px 8%;
         }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+            color: #111827;
+        }
+
+        /* HERO */
 
         .hero {
             min-height: 90vh;
@@ -87,6 +102,8 @@
             margin-bottom: 30px;
         }
 
+        /* BUTTONS */
+
         .btn {
             display: inline-block;
             padding: 12px 25px;
@@ -97,8 +114,6 @@
             border: 2px solid #2563eb;
             color: #2563eb;
             background: white;
-            cursor: pointer;
-            font-size: 16px;
         }
 
         .btn-primary {
@@ -107,15 +122,11 @@
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            background: #2563eb;
+            color: white;
         }
 
-        .section-title {
-            text-align: center;
-            font-size: 35px;
-            margin-bottom: 45px;
-            color: #111827;
-        }
+        /* ABOUT */
 
         .about {
             background: white;
@@ -129,25 +140,32 @@
             color: #475569;
         }
 
-        .education-card,
-        .project-card,
-        .contact-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        /* EDUCATION */
+
+        .education {
+            background: #f8fafc;
         }
 
         .education-card {
             max-width: 800px;
             margin: auto;
             text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         .education-card h3 {
             color: #2563eb;
             margin-bottom: 10px;
         }
+
+        .education-card p {
+            margin: 8px 0;
+        }
+
+        /* SKILLS */
 
         .skills-container {
             display: flex;
@@ -162,10 +180,12 @@
             background: white;
             padding: 12px 22px;
             border-radius: 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             font-weight: bold;
             color: #374151;
         }
+
+        /* PROJECTS */
 
         .projects {
             background: #eff6ff;
@@ -179,9 +199,17 @@
             margin: auto;
         }
 
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
         .project-card h3 {
             color: #2563eb;
             margin-bottom: 15px;
+            font-size: 24px;
         }
 
         .project-card p {
@@ -199,18 +227,19 @@
             font-weight: bold;
         }
 
-        .education {
-            background: white;
-        }
+        /* CONTACT */
 
         .contact {
-            background: #eff6ff;
+            background: white;
         }
 
         .contact-card {
             max-width: 700px;
             margin: auto;
             text-align: center;
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
         }
 
         .contact-card p {
@@ -221,7 +250,14 @@
         .contact-card a {
             color: #2563eb;
             text-decoration: none;
+            font-weight: 600;
         }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
 
         footer {
             background: #111827;
@@ -229,6 +265,8 @@
             text-align: center;
             padding: 25px;
         }
+
+        /* MOBILE */
 
         @media (max-width: 768px) {
 
@@ -238,7 +276,7 @@
             }
 
             nav a {
-                margin: 0 8px;
+                margin: 0 7px;
                 font-size: 14px;
             }
 
@@ -258,27 +296,41 @@
                 padding: 60px 5%;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
+
+    <!-- NAVIGATION -->
+
     <header>
+
         <h2>Snehil Kommawar</h2>
 
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
             <a href="#education">Education</a>
+
             <a href="#skills">Skills</a>
+
             <a href="#projects">Projects</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
+
     </header>
 
 
     <!-- HOME -->
+
     <section id="home" class="hero">
 
         <div class="hero-content">
@@ -297,20 +349,27 @@
                 I am continuously learning and improving my technical skills.
             </p>
 
+
+            <!-- GITHUB -->
+
             <a
                 class="btn btn-primary"
-                href="https://github.com/snehilkommawar"
-                target="_blank"
-                rel="noopener noreferrer">
+                href="https://github.com/snehilkommawar">
+
                 GitHub
+
             </a>
 
-            <!-- LinkedIn -->
-            <button
+
+            <!-- LINKEDIN -->
+
+            <a
                 class="btn"
-                onclick="openLinkedIn()">
+                href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
+
                 LinkedIn
-            </button>
+
+            </a>
 
         </div>
 
@@ -318,23 +377,27 @@
 
 
     <!-- ABOUT -->
+
     <section id="about" class="about">
 
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">
+            About Me
+        </h2>
 
         <div class="about-content">
 
             <p>
-                I am Snehil Kommawar, a B.Tech student at the
-                Institute of Aeronautical Engineering.
+                I am <strong>Snehil Kommawar</strong>, a B.Tech student
+                at the <strong>Institute of Aeronautical Engineering</strong>.
             </p>
 
             <br>
 
             <p>
-                I am interested in software development, web development
-                and problem solving. I enjoy learning new technologies
-                and developing practical projects to improve my skills.
+                I am interested in software development, web development,
+                programming and problem solving. I enjoy learning new
+                technologies and developing practical projects to improve
+                my technical skills.
             </p>
 
         </div>
@@ -343,16 +406,23 @@
 
 
     <!-- EDUCATION -->
+
     <section id="education" class="education">
 
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title">
+            Education
+        </h2>
 
         <div class="education-card">
 
-            <h3>Bachelor of Technology (B.Tech)</h3>
+            <h3>
+                Bachelor of Technology (B.Tech)
+            </h3>
 
             <p>
-                <strong>Institute of Aeronautical Engineering</strong>
+                <strong>
+                    Institute of Aeronautical Engineering
+                </strong>
             </p>
 
             <p>
@@ -360,11 +430,11 @@
             </p>
 
             <p>
-                Current CGPA: <strong>7.61</strong>
+                Current CGPA: <strong>7.61 / 10</strong>
             </p>
 
             <p>
-                7.61 CGPA as of 4th Semester
+                CGPA as of 4th Semester
             </p>
 
         </div>
@@ -373,29 +443,50 @@
 
 
     <!-- SKILLS -->
+
     <section id="skills">
 
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">
+            Technical Skills
+        </h2>
 
         <div class="skills-container">
 
-            <div class="skill">Python</div>
+            <div class="skill">
+                Python
+            </div>
 
-            <div class="skill">Java</div>
+            <div class="skill">
+                Java
+            </div>
 
-            <div class="skill">HTML</div>
+            <div class="skill">
+                HTML
+            </div>
 
-            <div class="skill">React.js</div>
+            <div class="skill">
+                React.js
+            </div>
 
-            <div class="skill">SQL</div>
+            <div class="skill">
+                SQL
+            </div>
 
-            <div class="skill">MySQL</div>
+            <div class="skill">
+                MySQL
+            </div>
 
-            <div class="skill">Git</div>
+            <div class="skill">
+                Git
+            </div>
 
-            <div class="skill">GitHub</div>
+            <div class="skill">
+                GitHub
+            </div>
 
-            <div class="skill">VS Code</div>
+            <div class="skill">
+                VS Code
+            </div>
 
         </div>
 
@@ -403,48 +494,60 @@
 
 
     <!-- PROJECTS -->
+
     <section id="projects" class="projects">
 
-        <h2 class="section-title">Projects</h2>
+        <h2 class="section-title">
+            Projects
+        </h2>
+
 
         <div class="project-container">
 
-            <!-- PROJECT 1 -->
+
+            <!-- DJANGO CRM -->
+
             <div class="project-card">
 
-                <h3>Django CRM</h3>
+                <h3>
+                    Django CRM
+                </h3>
 
                 <p>
                     A Customer Relationship Management web application
-                    being developed using Django. The project focuses
-                    on managing customer-related information and
-                    implementing web application functionality.
+                    currently being developed using Django. The project
+                    focuses on learning web application development and
+                    implementing customer management functionality.
                 </p>
 
                 <span class="status">
-                    Currently In Progress
+                    🚧 In Progress
                 </span>
 
             </div>
 
 
-            <!-- PROJECT 2 -->
+            <!-- DENGUE DETECTION -->
+
             <div class="project-card">
 
-                <h3>Dengue Detection</h3>
+                <h3>
+                    Dengue Detection
+                </h3>
 
                 <p>
-                    A proposed project focused on exploring a
-                    smartphone-camera-based approach for preliminary
-                    dengue screening. The project is planned as a
-                    non-invasive and accessible screening solution.
+                    A planned project exploring a smartphone-camera-based
+                    approach for preliminary dengue screening. The project
+                    aims to explore a simple and non-invasive screening
+                    approach.
                 </p>
 
                 <span class="status">
-                    Planned / Not Started
+                    📌 Planned
                 </span>
 
             </div>
+
 
         </div>
 
@@ -452,38 +555,62 @@
 
 
     <!-- CONTACT -->
+
     <section id="contact" class="contact">
 
-        <h2 class="section-title">Contact Me</h2>
+        <h2 class="section-title">
+            Contact Me
+        </h2>
 
         <div class="contact-card">
 
+
             <p>
-                <strong>Email:</strong>
+
+                <strong>
+                    Email:
+                </strong>
+
                 <a href="mailto:snehilkommawar@gmail.com">
+
                     snehilkommawar@gmail.com
+
                 </a>
+
             </p>
 
+
             <p>
-                <strong>GitHub:</strong>
+
+                <strong>
+                    GitHub:
+                </strong>
+
                 <a
-                    href="https://github.com/snehilkommawar"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                    href="https://github.com/snehilkommawar">
+
                     github.com/snehilkommawar
+
                 </a>
+
             </p>
+
 
             <p>
-                <strong>LinkedIn:</strong>
 
-                <button
-                    class="btn"
-                    onclick="openLinkedIn()">
-                    Open LinkedIn Profile
-                </button>
+                <strong>
+                    LinkedIn:
+                </strong>
+
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/">
+
+                    linkedin.com/in/snehil-kommawar-75865433a
+
+                </a>
+
             </p>
+
 
         </div>
 
@@ -491,26 +618,20 @@
 
 
     <!-- FOOTER -->
+
     <footer>
 
         <p>
             © 2026 Snehil Kommawar. All Rights Reserved.
         </p>
 
+        <p>
+            Built with HTML and CSS
+        </p>
+
     </footer>
 
 
-    <!-- LINKEDIN JAVASCRIPT -->
-    <script>
-
-        function openLinkedIn() {
-
-            window.location.href =
-                "https://www.linkedin.com/in/snehil-kommawar-75865433a/";
-
-        }
-
-    </script>
-
 </body>
+
 </html>
