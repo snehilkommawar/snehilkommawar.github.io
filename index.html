@@ -8,7 +8,6 @@
     <title>Snehil Kommawar | Portfolio</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -18,365 +17,383 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f9ff;
-            color: #172033;
+            color: #111827;
             line-height: 1.6;
+            background: #ffffff;
         }
 
         /* NAVBAR */
 
         header {
-            background: white;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            background: white;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
         }
 
         .navbar {
             max-width: 1200px;
             margin: auto;
-            padding: 20px 30px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
-            color: #2864e8;
+            color: #2864e6;
         }
 
-        nav ul {
-            list-style: none;
+        .nav-links {
             display: flex;
+            list-style: none;
             gap: 30px;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
-            color: #273449;
+            color: #374151;
             font-weight: bold;
             font-size: 17px;
-            transition: 0.3s;
         }
 
-        nav a:hover {
-            color: #2864e8;
-        }
-
-        /* GENERAL SECTION */
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 30px;
-        }
-
-        section h2 {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 45px;
-            color: #2864e8;
+        .nav-links a:hover {
+            color: #2864e6;
         }
 
         /* HOME */
 
         #home {
             min-height: 90vh;
-            max-width: none;
-            padding: 150px 30px 100px;
-            text-align: center;
-            background: linear-gradient(
-                135deg,
-                #edf5ff,
-                #f8fbff
-            );
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #eef6ff;
+            padding: 80px 20px;
         }
 
-        #home h1 {
+        .home-content {
+            max-width: 900px;
+        }
+
+        .home-content h1 {
             font-size: 60px;
             margin-bottom: 20px;
-            color: #111827;
         }
 
-        #home h1 span {
-            color: #2864e8;
+        .home-content h1 span {
+            color: #2864e6;
         }
 
-        .home-title {
-            font-size: 26px;
-            font-weight: bold;
-            color: #42526b;
+        .home-content h2 {
+            font-size: 27px;
+            color: #40536b;
             margin-bottom: 25px;
         }
 
-        .home-description {
-            max-width: 800px;
-            font-size: 19px;
-            color: #52657d;
-            margin-bottom: 35px;
+        .home-content p {
+            font-size: 20px;
+            color: #55708f;
+            max-width: 750px;
+            margin: auto;
         }
 
         .buttons {
-            display: flex;
-            gap: 18px;
-            justify-content: center;
-            flex-wrap: wrap;
+            margin-top: 35px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 30px;
-            border-radius: 8px;
             text-decoration: none;
+            padding: 14px 32px;
+            margin: 8px;
+            border-radius: 10px;
             font-size: 18px;
             font-weight: bold;
-            transition: 0.3s;
+            border: 2px solid #2864e6;
         }
 
         .btn-primary {
-            background: #2864e8;
+            background: #2864e6;
             color: white;
         }
 
         .btn-primary:hover {
-            background: #174fc4;
-            transform: translateY(-3px);
+            background: #174fc2;
         }
 
-        .btn-outline {
-            border: 2px solid #2864e8;
-            color: #2864e8;
+        .btn-secondary {
+            color: #2864e6;
             background: white;
         }
 
-        .btn-outline:hover {
-            background: #2864e8;
-            color: white;
-            transform: translateY(-3px);
+        .btn-secondary:hover {
+            background: #e8f0ff;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 80px 5%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 50px;
         }
 
         /* ABOUT */
 
-        .about-box {
+        #about {
             background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            font-size: 18px;
-            color: #4b5c73;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 19px;
+            color: #55708f;
+            line-height: 1.9;
         }
 
         /* EDUCATION */
 
+        #education {
+            background: #f7faff;
+        }
+
         .education-card {
+            max-width: 850px;
+            margin: auto;
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            text-align: center;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2864e6;
         }
 
         .education-card h3 {
-            color: #2864e8;
-            font-size: 25px;
-            margin-bottom: 12px;
+            color: #2864e6;
+            font-size: 26px;
+            margin-bottom: 10px;
         }
 
         .education-card p {
             font-size: 18px;
-            color: #52657d;
+            color: #55708f;
             margin: 7px 0;
         }
 
         /* SKILLS */
 
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
+        #skills {
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s;
         }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
+        .skills-container {
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
         }
 
-        .skill-card h3 {
-            color: #2864e8;
-            margin-bottom: 10px;
-        }
-
-        .skill-card p {
-            color: #52657d;
+        .skill {
+            background: #dceaff;
+            color: #1558c0;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 17px;
+            font-weight: bold;
         }
 
         /* PROJECTS */
 
+        #projects {
+            background: #eef6ff;
+        }
+
         .projects-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            max-width: 950px;
+            margin: auto;
         }
 
         .project-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: 0.3s;
+            padding: 35px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            border-top: 5px solid #2864e6;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
-        .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        .project-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
         }
 
         .project-card h3 {
-            color: #2864e8;
-            font-size: 22px;
+            color: #2864e6;
+            font-size: 27px;
             margin-bottom: 15px;
         }
 
         .project-card p {
-            color: #52657d;
+            color: #55708f;
+            font-size: 18px;
+            line-height: 1.8;
             margin-bottom: 15px;
         }
 
         .project-card ul {
-            padding-left: 20px;
-            color: #52657d;
+            color: #4b6580;
+            font-size: 16px;
+            line-height: 1.8;
+            padding-left: 25px;
         }
 
-        .project-card li {
-            margin-bottom: 8px;
-        }
-
-        .tech-stack {
-            margin-top: 20px;
-            color: #273449 !important;
-        }
+        /* STATUS */
 
         .status {
             display: inline-block;
-            background: #edf5ff;
-            padding: 8px 15px;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .completed {
+            background: #d9f7e5;
+            color: #16803c;
+        }
+
+        .progress {
+            background: #fff0c2;
+            color: #a56a00;
+        }
+
+        .planned {
+            background: #fff0c2;
+            color: #a56a00;
+        }
+
+        /* TECH STACK */
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .tech-stack span {
+            background: #dceaff;
+            color: #1558c0;
+            padding: 8px 16px;
             border-radius: 20px;
-            color: #2864e8 !important;
             font-weight: bold;
         }
 
         /* CONTACT */
 
-        .contact-box {
+        #contact {
             background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
 
-        .contact-box p {
-            font-size: 18px;
-            margin: 15px 0;
-            color: #52657d;
+        .contact-container {
+            max-width: 800px;
+            margin: auto;
         }
 
-        .contact-box a {
-            color: #2864e8;
+        .contact-container p {
+            font-size: 18px;
+            margin: 15px 0;
+            color: #55708f;
+        }
+
+        .contact-container a {
+            color: #2864e6;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .contact-box a:hover {
+        .contact-container a:hover {
             text-decoration: underline;
         }
 
         /* FOOTER */
 
         footer {
-            background: #172033;
+            background: #111827;
             color: white;
             text-align: center;
             padding: 25px;
         }
 
-        /* RESPONSIVE */
+        /* MOBILE */
 
-        @media (max-width: 800px) {
+        @media (max-width: 768px) {
 
             .navbar {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav ul {
+            .nav-links {
                 gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            #home h1 {
-                font-size: 42px;
-            }
-
-            .home-title {
-                font-size: 21px;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 70px 20px;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            #home h1 {
-                font-size: 34px;
-            }
-
-            nav a {
+            .nav-links a {
                 font-size: 15px;
             }
 
-            .logo {
-                font-size: 24px;
+            .home-content h1 {
+                font-size: 40px;
+            }
+
+            .home-content h2 {
+                font-size: 21px;
+            }
+
+            .home-content p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 20px;
             }
 
             section h2 {
-                font-size: 30px;
+                font-size: 34px;
             }
 
             .project-card {
-                padding: 22px;
+                padding: 25px;
+            }
+
+            .project-card h3 {
+                font-size: 23px;
+            }
+
+            .project-card p {
+                font-size: 16px;
             }
         }
-
     </style>
 </head>
-
 
 <body>
 
@@ -384,45 +401,41 @@
 
     <header>
 
-        <div class="navbar">
+        <nav class="navbar">
 
             <div class="logo">
                 Snehil Kommawar
             </div>
 
-            <nav>
+            <ul class="nav-links">
 
-                <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
 
-                    <li>
-                        <a href="#education">Education</a>
-                    </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+            </ul>
 
-                </ul>
-
-            </nav>
-
-        </div>
+        </nav>
 
     </header>
 
@@ -431,39 +444,41 @@
 
     <section id="home">
 
-        <h1>
-            Hi, I'm <span>Snehil Kommawar</span>
-        </h1>
+        <div class="home-content">
 
-        <p class="home-title">
-            Programmer | Web Developer | Aspiring Software Developer
-        </p>
+            <h1>
+                Hi, I'm <span>Snehil Kommawar</span>
+            </h1>
 
-        <p class="home-description">
+            <h2>
+                Programmer | Web Developer | Aspiring Software Developer
+            </h2>
 
-            I am a B.Tech student passionate about programming,
-            web development and building practical software projects.
-            I am continuously learning and improving my technical skills.
+            <p>
+                I am a B.Tech student passionate about programming,
+                web development and building practical software projects.
+                I am continuously learning and improving my technical skills.
+            </p>
 
-        </p>
+            <div class="buttons">
 
-        <div class="buttons">
+                <a
+                    href="https://github.com/snehilkommawar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    GitHub
+                </a>
 
-            <a
-                href="https://github.com/snehilkommawar"
-                target="_blank"
-                class="btn btn-primary"
-            >
-                GitHub
-            </a>
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary">
+                    LinkedIn
+                </a>
 
-            <a
-                href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
-                target="_blank"
-                class="btn btn-outline"
-            >
-                LinkedIn
-            </a>
+            </div>
 
         </div>
 
@@ -476,35 +491,18 @@
 
         <h2>About Me</h2>
 
-        <div class="about-box">
+        <div class="about-container">
 
             <p>
-
-                I am a B.Tech student at the
-                <strong>Institute of Aeronautical Engineering</strong>,
-                currently pursuing my degree and expected to graduate in
-                <strong>2028</strong>.
-
+                I am Snehil Kommawar, a B.Tech student at the
+                Institute of Aeronautical Engineering. I am interested
+                in software development, Python programming, web
+                development and machine learning.
             </p>
 
-            <br>
-
             <p>
-
-                I am interested in software development, programming,
-                web development and building practical applications.
-                I enjoy learning new technologies and improving my
-                problem-solving skills through projects.
-
-            </p>
-
-            <br>
-
-            <p>
-
-                Currently, I am working on improving my skills in
-                Python, Java, React.js, HTML, SQL and web development.
-
+                I enjoy building practical projects and continuously
+                improving my programming and problem-solving skills.
             </p>
 
         </div>
@@ -520,26 +518,18 @@
 
         <div class="education-card">
 
-            <h3>Bachelor of Technology (B.Tech)</h3>
+            <h3>B.Tech</h3>
 
             <p>
-                <strong>Institute:</strong>
-                Institute of Aeronautical Engineering
+                <strong>Institute of Aeronautical Engineering</strong>
             </p>
 
             <p>
-                <strong>Expected Graduation:</strong>
-                2028
+                Expected Graduation: 2028
             </p>
 
             <p>
-                <strong>Current CGPA:</strong>
-                7.61 / 10
-            </p>
-
-            <p>
-                <strong>Current Semester:</strong>
-                4th Semester
+                Current CGPA: <strong>7.61</strong> (4th Semester)
             </p>
 
         </div>
@@ -551,80 +541,29 @@
 
     <section id="skills">
 
-        <h2>Technical Skills</h2>
+        <h2>Skills</h2>
 
         <div class="skills-container">
 
-            <div class="skill-card">
+            <span class="skill">Python</span>
 
-                <h3>Programming</h3>
+            <span class="skill">Java</span>
 
-                <p>
-                    Python<br>
-                    Java
-                </p>
+            <span class="skill">React.js</span>
 
-            </div>
+            <span class="skill">HTML</span>
 
+            <span class="skill">CSS</span>
 
-            <div class="skill-card">
+            <span class="skill">SQL</span>
 
-                <h3>Web Development</h3>
+            <span class="skill">MySQL</span>
 
-                <p>
-                    HTML<br>
-                    CSS<br>
-                    React.js
-                </p>
+            <span class="skill">Git</span>
 
-            </div>
+            <span class="skill">GitHub</span>
 
-
-            <div class="skill-card">
-
-                <h3>Database</h3>
-
-                <p>
-                    SQL<br>
-                    MySQL
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>Version Control</h3>
-
-                <p>
-                    Git<br>
-                    GitHub
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>Development Tools</h3>
-
-                <p>
-                    VS Code
-                </p>
-
-            </div>
-
-
-            <div class="skill-card">
-
-                <h3>Other</h3>
-
-                <p>
-                    Data Structures<br>
-                    Algorithms
-                </p>
-
-            </div>
+            <span class="skill">VS Code</span>
 
         </div>
 
@@ -640,13 +579,21 @@
         <div class="projects-container">
 
 
-            <!-- PASSWORD GENERATOR -->
+            <!-- PROJECT 1 -->
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    🔐
+                </div>
+
                 <h3>
-                    Password Generator | Python
+                    Password Generator
                 </h3>
+
+                <span class="status completed">
+                    ✅ Completed
+                </span>
 
                 <p>
                     Created a command-line interface for a secure
@@ -657,8 +604,7 @@
 
                     <li>
                         Added user-customizable password length options
-                        and support for capital, lowercase, digits,
-                        and symbols.
+                        with capital, lowercase, digits, and symbols.
                     </li>
 
                     <li>
@@ -669,197 +615,289 @@
 
                     <li>
                         Demonstrated input validation, string handling,
-                        and a clear code structure in a user-friendly
-                        utility tool.
+                        and a clear code structure.
                     </li>
 
                 </ul>
 
-                <p class="tech-stack">
+                <div class="tech-stack">
 
-                    <strong>Technologies:</strong>
-                    Python
+                    <span>Python</span>
 
-                </p>
+                </div>
 
             </div>
 
 
-            <!-- FLIGHT ACCIDENT ML -->
+            <!-- PROJECT 2 -->
 
             <div class="project-card">
+
+                <div class="project-icon">
+                    ✈️
+                </div>
 
                 <h3>
                     Applying Machine Learning to Predict the Severity
                     Levels and Find Root Causes in Flight Accidents
                 </h3>
 
-                <p>
+                <span class="status completed">
+                    ✅ Completed
+                </span>
 
+                <p>
                     Developed a machine learning-based system to predict
                     the severity of flight accidents and identify their
                     root causes with high accuracy. Built an interactive
                     dashboard to visualize predictive insights for
                     aviation safety analysis.
-
                 </p>
 
                 <ul>
 
                     <li>
                         Implemented supervised learning models
-                        (XGBoost, Random Forest) with data preprocessing
-                        and feature engineering to achieve up to 85%
-                        prediction accuracy.
+                        (XGBoost and Random Forest) with data
+                        preprocessing and feature engineering.
+                    </li>
+
+                    <li>
+                        Achieved up to 85% prediction accuracy.
                     </li>
 
                     <li>
                         Integrated responsive dashboards using HTML,
-                        CSS, and Bootstrap to present severity predictions
-                        and root cause analysis interactively.
+                        CSS, and Bootstrap.
                     </li>
 
                     <li>
                         Connected the machine learning model with the
-                        dashboard backend, enabling real-time visualization
-                        of results and user-friendly interpretation.
+                        dashboard backend for visualization of results.
+                    </li>
+
+                    <li>
+                        Presented severity predictions and root cause
+                        analysis interactively.
                     </li>
 
                 </ul>
 
-                <p class="tech-stack">
+                <div class="tech-stack">
 
-                    <strong>Technologies:</strong>
-                    Python | Machine Learning | HTML | CSS | Bootstrap
+                    <span>Python</span>
 
-                </p>
+                    <span>Machine Learning</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>Bootstrap</span>
+
+                    <span>XGBoost</span>
+
+                    <span>Random Forest</span>
+
+                </div>
 
             </div>
 
 
-            <!-- MOVIE REVIEWER -->
+            <!-- PROJECT 3 -->
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    🎬
+                </div>
+
                 <h3>
-                    Movie Reviewer App | React.js | Firebase
+                    Movie Reviewer App
                 </h3>
 
-                <p>
+                <span class="status completed">
+                    ✅ Completed
+                </span>
 
+                <p>
                     Built a dynamic Movie Reviewer App with React.js
                     and Firebase, enabling users to browse movies,
                     search for reviews, and add their own feedback
                     in real time.
-
                 </p>
 
                 <ul>
 
                     <li>
                         Implemented authentication system
-                        (sign-up/sign-in) using Firebase Auth to manage
-                        secure user sessions.
+                        (sign-up/sign-in) using Firebase Auth.
                     </li>
 
                     <li>
                         Connected Firebase Firestore for storing,
                         retrieving, and updating movie reviews in
-                        real time, ensuring instant synchronization
-                        across users.
+                        real time.
                     </li>
 
                     <li>
                         Integrated search functionality using query
-                        parameters to allow users to quickly find
-                        specific movie reviews.
+                        parameters to quickly find specific movie
+                        reviews.
                     </li>
 
                     <li>
-                        Utilized HTTP methods such as GET, POST, PUT,
-                        PATCH, and DELETE to handle dynamic data
-                        interaction.
+                        Utilized HTTP methods such as GET, POST,
+                        PUT, PATCH, and DELETE.
                     </li>
 
                     <li>
-                        Developed a responsive UI using Bootstrap and
-                        custom CSS, with smooth navigation and dynamic
-                        review rendering powered by React Router.
+                        Developed a responsive UI using Bootstrap
+                        and custom CSS.
+                    </li>
+
+                    <li>
+                        Implemented smooth navigation and dynamic
+                        review rendering using React Router.
                     </li>
 
                 </ul>
 
-                <p class="tech-stack">
+                <div class="tech-stack">
 
-                    <strong>Technologies:</strong>
-                    React.js | Firebase | HTML | CSS | Bootstrap
+                    <span>React.js</span>
 
-                </p>
+                    <span>Firebase</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>Bootstrap</span>
+
+                </div>
 
             </div>
 
 
-            <!-- DJANGO CRM -->
+            <!-- PROJECT 4 -->
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    🏢
+                </div>
+
                 <h3>
-                    Django CRM System
+                    Django CRM
                 </h3>
 
-                <p>
+                <span class="status progress">
+                    🚧 In Progress
+                </span>
 
-                    A customer relationship management web application
-                    currently under development using Django. The project
+                <p>
+                    A Customer Relationship Management system currently
+                    being developed using Django and Python. The project
                     focuses on managing customer information and
-                    CRM-related operations.
-
+                    implementing practical CRM functionality.
                 </p>
 
-                <p class="status">
+                <ul>
 
-                    🔄 In Progress
+                    <li>
+                        Developing the backend using Django and Python.
+                    </li>
 
-                </p>
+                    <li>
+                        Working on customer management functionality.
+                    </li>
 
-                <p class="tech-stack">
+                    <li>
+                        Working on database integration using MySQL.
+                    </li>
 
-                    <strong>Technologies:</strong>
-                    Python | Django | HTML | CSS | MySQL
+                    <li>
+                        Developing and improving the web interface.
+                    </li>
 
-                </p>
+                    <li>
+                        Project is currently under development.
+                    </li>
+
+                </ul>
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+
+                    <span>Django</span>
+
+                    <span>HTML</span>
+
+                    <span>CSS</span>
+
+                    <span>MySQL</span>
+
+                </div>
 
             </div>
 
 
-            <!-- DENGUE DETECTION -->
+            <!-- PROJECT 5 -->
 
             <div class="project-card">
 
+                <div class="project-icon">
+                    🦟
+                </div>
+
                 <h3>
-                    Dengue Detection System
+                    Dengue Detection
                 </h3>
 
+                <span class="status planned">
+                    📌 Planned
+                </span>
+
                 <p>
-
-                    A planned smartphone-based, non-invasive preliminary
-                    dengue screening project. The project aims to explore
-                    image-based analysis using a smartphone camera.
-
+                    A planned project exploring a smartphone-camera-based
+                    approach for preliminary dengue screening. The project
+                    aims to explore a simple and non-invasive screening
+                    approach.
                 </p>
 
-                <p class="status">
+                <ul>
 
-                    📌 Planned / Not Started
+                    <li>
+                        Project is currently in the planning stage.
+                    </li>
 
-                </p>
+                    <li>
+                        Development has not started yet.
+                    </li>
 
-                <p class="tech-stack">
+                    <li>
+                        The project will explore smartphone
+                        camera-based screening.
+                    </li>
 
-                    <strong>Technologies:</strong>
-                    To be determined during development
+                    <li>
+                        The project will investigate computer vision
+                        and machine learning techniques.
+                    </li>
 
-                </p>
+                </ul>
+
+                <div class="tech-stack">
+
+                    <span>Python</span>
+
+                    <span>Machine Learning</span>
+
+                    <span>Computer Vision</span>
+
+                </div>
 
             </div>
 
@@ -875,75 +913,34 @@
 
         <h2>Contact Me</h2>
 
-        <div class="contact-box">
+        <div class="contact-container">
 
             <p>
-
-                <strong>Email:</strong>
-
+                Email:
                 <a href="mailto:snehilkommawar@gmail.com">
                     snehilkommawar@gmail.com
                 </a>
-
             </p>
 
-
             <p>
-
-                <strong>GitHub:</strong>
-
+                GitHub:
                 <a
                     href="https://github.com/snehilkommawar"
                     target="_blank"
-                >
+                    rel="noopener noreferrer">
                     github.com/snehilkommawar
                 </a>
-
             </p>
-
 
             <p>
-
-                <strong>LinkedIn:</strong>
-
+                LinkedIn:
                 <a
                     href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
                     target="_blank"
-                >
-                    linkedin.com/in/snehil-kommawar-75865433a
+                    rel="noopener noreferrer">
+                    LinkedIn Profile
                 </a>
-
             </p>
-
-
-            <br>
-
-            <div class="buttons">
-
-                <a
-                    href="mailto:snehilkommawar@gmail.com"
-                    class="btn btn-primary"
-                >
-                    Email Me
-                </a>
-
-                <a
-                    href="https://github.com/snehilkommawar"
-                    target="_blank"
-                    class="btn btn-outline"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/snehil-kommawar-75865433a/"
-                    target="_blank"
-                    class="btn btn-outline"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
 
         </div>
 
@@ -959,7 +956,6 @@
         </p>
 
     </footer>
-
 
 </body>
 
