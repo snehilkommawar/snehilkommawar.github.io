@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kommawar Snehil | Portfolio</title>
+
+    <meta name="description"
+          content="Portfolio of Kommawar Snehil - Programmer, Web Developer and Aspiring Software Developer">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #475569;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #1d4ed8;
+        }
+
+        .secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        .secondary:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        /* GENERAL */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 45px;
+            color: #0f172a;
+        }
+
+        /* ABOUT */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 17px;
+            color: #475569;
+        }
+
+        .education {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .education h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #64748b;
+        }
+
+        /* PROJECTS */
+        #projects {
+            background: #eef4ff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2563eb;
+        }
+
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .project-card p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .planned {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 15px;
+            color: #64748b;
+        }
+
+        .contact a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                Snehil Kommawar
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Hi, I'm <span>Snehil Kommawar</span>
+            </h1>
+
+            <h2>
+                Programmer | Web Developer | Aspiring Software Developer
+            </h2>
+
+            <p>
+                I am a B.Tech student passionate about programming,
+                web development and building practical software projects.
+                I am continuously learning and improving my technical skills.
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    href="https://github.com/snehilkommawar"
+                    target="_blank"
+                    class="btn primary">
+                    GitHub
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865-433a/"
+                    target="_blank"
+                    class="btn secondary">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p>
+                        I am <strong>Kommawar Snehil</strong>, a B.Tech student
+                        at the <strong>Institute of Aeronautical Engineering</strong>,
+                        currently pursuing my degree and expected to graduate in 2028.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        I have an interest in software development, programming,
+                        web development and database technologies. I enjoy learning
+                        new technologies and applying my knowledge through practical
+                        projects.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Currently, I am working on a Django CRM project and
+                        planning a Dengue Detection project as part of my
+                        continued learning and development.
+                    </p>
+
+                </div>
+
+
+                <div class="education">
+
+                    <h3>Education</h3>
+
+                    <h4>B.Tech</h4>
+
+                    <p>
+                        Institute of Aeronautical Engineering
+                    </p>
+
+                    <p>
+                        Expected Graduation: <strong>2028</strong>
+                    </p>
+
+                    <p>
+                        Current CGPA: <strong>7.61 / 10</strong>
+                    </p>
+
+                    <p>
+                        <small>
+                            CGPA as of 4th Semester
+                        </small>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                My Skills
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                    <p>Java</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML</p>
+                    <p>React.js</p>
+                    <p>Django</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Database</h3>
+                    <p>SQL</p>
+                    <p>MySQL</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git</p>
+                    <p>GitHub</p>
+                    <p>VS Code</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+            <div class="projects-grid">
+
+                <!-- DJANGO CRM -->
+                <div class="project-card">
+
+                    <h3>
+                        Django CRM
+                    </h3>
+
+                    <p>
+                        A Customer Relationship Management web application
+                        currently being developed using Django. The project
+                        focuses on learning web application development,
+                        database integration and CRUD functionality.
+                    </p>
+
+                    <span class="status">
+                        🚧 In Progress
+                    </span>
+
+                </div>
+
+
+                <!-- DENGUE -->
+                <div class="project-card">
+
+                    <h3>
+                        Dengue Detection
+                    </h3>
+
+                    <p>
+                        A planned project exploring a smartphone-camera-based
+                        approach for preliminary dengue screening using image
+                        analysis and machine learning concepts.
+                    </p>
+
+                    <span class="status planned">
+                        📌 Planned
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <div class="container contact">
+
+            <h2 class="section-title">
+                Contact Me
+            </h2>
+
+            <p>
+                I'm always interested in learning, building projects
+                and connecting with other developers.
+            </p>
+
+            <p>
+                Email:
+                <a href="mailto:snehilkommawar@gmail.com">
+                    snehilkommawar@gmail.com
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a
+                    href="https://www.linkedin.com/in/snehil-kommawar-75865-433a/"
+                    target="_blank">
+                    View LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a
+                    href="https://github.com/snehilkommawar"
+                    target="_blank">
+                    View GitHub Profile
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Kommawar Snehil
+        </p>
+
+        <p>
+            Built with HTML & CSS
+        </p>
+
+    </footer>
+
+</body>
+</html>
